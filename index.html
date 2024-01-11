@@ -1,0 +1,79 @@
+<!-- /* HTML-kod för lösning till projektuppgiften i kurs DT173G, gjort av Cecilia Edvardsson -->
+
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hem | Konbanwa Restaurang</title>
+    <!-- CSS, Fonts, Icons, Favicons-->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=B612&family=Damion&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/favicons/faviconico.ico">
+    <link rel="icon" type="image/x-icon" href="images/favicons/faviconpng.png">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <a href="index.html"><img class="img" src="images/logo/logo.svg" alt="Konbanwa Restaurang">
+            <h1>Konbanwa</h1>
+        </a>
+        <!-- Menyknapp för öppning -->
+        <button class="menuBtn open" id="openMenubtn">
+            <span class="menuIcon">
+                <span class="bars"></span>
+                <span class="bars"></span>
+                <span class="bars"></span>
+            </span>
+        </button>
+        <nav id="navigationMenu">
+            <!-- Menyknapp för stängning -->
+            <button class="menuBtn close" id="closeMenubtn">
+                <span class="menuIcon">
+                    <span class="bars line1"></span>
+                    <span class="bars line2"></span>
+                </span>
+            </button>
+            <ul>
+                <li><a href="index.html">Hem</a></li>
+                <li><a href="menu.html">Meny</a></li>
+                <li><a href="about.html">Om oss</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+                <li class="nav-link-bokning"><a class="nav-link-bokning" href="booking.html">Boka bord</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<!-- Huvudinnehåll -->
+<main>
+    <section class="section-index">
+        <div class="index-opening">
+            <h2>En stilla kväll i japanska tecken</h2>
+            <p>Njut av en noggrant kurerad samling av äkta
+                japansk sushi. Kock Hayao Kumasaki tar dig till Tokyo via Östermalm.</p>
+            <p><a href="booking.html">Boka bord</a></p>
+        </div>
+        <picture>
+            <source type="image/webp" media="(min-width: 601px)" srcset="images/index/indexbigwebp.webp">
+            <source type="image/webp" media="(max-width: 600px)" srcset="images/index/indexsmallwebp.webp">
+            <img src="images/index/indexbigjpg.jpg" alt="Rätten Desuka">
+        </picture>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer>
+    <h3>Kontakt</h3>
+    <p>Nybrogatan 17</p>
+    <p>Tel: 08-123 45 67</p>
+    <p>Mail:<a href=" mailto:ceed2200@student.miun.se"> kontakt@konbanwa.se</a></p>
+</footer>
+<script src="js/main.js"></script>
+</body>
+
+</html>
