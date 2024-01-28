@@ -1,0 +1,114 @@
+/* SCSS-kod för lösning till projektuppgiften i kurs DT173G, gjort av Cecilia Edvardsson */
+
+/* Variabler för färger */
+$text-color-general : #FFFFFF;
+$background-color-general : #000000;
+$alternative-background-color : #FFFFFF;
+$salmon-orange : #C47910;
+
+/* Variabler för typsnitt */
+$fancy-font : Damion,
+Verdana,
+Geneva,
+Tahoma,
+sans-serif;
+$simple-font : B612,
+'Times New Roman',
+Times,
+serif;
+
+/* Variabler för breakpoints till media queries : mindre mobil, tablet, desktop */
+$breakpoint-mini : 411px;
+$breakpoint-tablet : 992px;
+$breakpoint-desktop : 1281px;
+
+/* Generella inställningar */
+
+body {
+    background-color: $background-color-general;
+    font-family: $simple-font;
+    color: $text-color-general;
+    margin: 0;
+}
+
+a h1 {
+    font-family: $fancy-font;
+    font-size: 43px;
+    font-weight: 300;
+    color: $text-color-general;
+    text-decoration: none !important;
+    display: inline;
+    padding-left: 10px;
+    position: relative;
+    bottom: 10px;
+
+    @media screen and (max-width: $breakpoint-mini) {
+        bottom: 0;
+        font-size:35px;
+    }
+}
+
+h2,
+h3,
+p {
+    font-weight: 200;
+}
+
+header {
+    margin: 0;
+    position: relative;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0px 10px rgba(146, 145, 145, 0.71);
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        padding: 15px 3em;
+        position: static;
+    }
+}
+
+header {
+    a {
+        text-decoration: none !important;
+    }
+
+    a img {
+        width: 50px;
+        display: inline;
+        position: relative;
+        top: 10px;
+
+        @media screen and (max-width: $breakpoint-mini) {
+            width: 40px;
+            top: 15px;
+        }
+    }
+
+}
+
+footer {
+    text-align: left;
+    padding: 20px;
+}
+
+footer {
+    h3 {
+        color: $salmon-orange;
+    }
+
+    p {
+        padding-right: 10px;
+
+        @media screen and (min-width: $breakpoint-tablet) {
+            display: inline;
+            margin-right: 25px;
+        }
+    }
+
+    p a {
+        color: $text-color-general;
+        text-decoration: none;
+    }
+}

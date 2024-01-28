@@ -1,0 +1,132 @@
+/* SCSS-kod för lösning till projektuppgiften i kurs DT173G, gjort av Cecilia Edvardsson */
+
+/* Navigerings-delen */
+
+nav {
+    background-color: $background-color-general;
+    box-shadow: 0 0px 10px rgba(199, 197, 197, 0.71);
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 245px;
+    display: none;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        display: block !important;
+        position: static;
+        box-shadow: 0 0px 0px;
+        height: auto;
+        font-size: 1.4em;
+        width: auto;
+    }
+}
+
+nav {
+    ul {
+        width: 100%;
+        list-style-type: none;
+        text-align: center;
+        margin: 0 auto;
+        padding: 0;
+
+        @media screen and (min-width: $breakpoint-tablet) {
+            height: 100%;
+        }
+    }
+
+    li {
+        padding: 0.9em 0;
+        width: 100%;
+
+        @media screen and (min-width: $breakpoint-tablet) {
+            display: inline;
+            padding: 1.2em 0;
+        }
+    }
+
+    a {
+        color: $text-color-general;
+        text-decoration: none;
+        padding: 0 1em;
+    }
+
+    li:hover {
+        cursor: pointer;
+        text-decoration: underline;
+        text-decoration-color: $salmon-orange;
+    }
+
+    .nav-link-bokning {
+        color: $salmon-orange;
+    }
+
+    .nav-link-bokning:hover {
+        text-decoration-color: $text-color-general !important;
+    }
+}
+
+/* Hamburgermeny-symbolen */
+.menuIcon {
+    margin-right: 10px;
+}
+
+.bars {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: $alternative-background-color;
+    margin: 5px 0;
+}
+
+.line1 {
+    width: 25px;
+    transform: rotate(45deg);
+    position: relative;
+    top: 5px;
+}
+
+.line2 {
+    width: 25px;
+    transform: rotate(135deg);
+    position: relative;
+    top: -3px;
+}
+
+/* Meny knappar */
+.menuBtn {
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    background-color: $background-color-general;
+    border: #FFFFFF solid 2px;
+    cursor: pointer;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        display: none;
+    }
+}
+
+.menuBtn:hover {
+    background-color: $salmon-orange;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.421);
+}
+
+/* Specifikt för menyknapp för öppning av meny */
+.open {
+    margin: 0 15px;
+    padding: 8px 5px 8px 13px;
+}
+
+#openMenubtn {
+    @media screen and (min-width: $breakpoint-tablet) {
+        display: none !important;
+    }
+}
+
+/* Specifikt för menyknapp för stängning av meny */
+.close {
+    margin: 30px 95px;
+    padding: 10px 5px 10px 15px;
+}

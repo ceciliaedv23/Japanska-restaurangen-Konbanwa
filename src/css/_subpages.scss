@@ -1,0 +1,327 @@
+/* SCSS-kod för lösning till projektuppgiften i kurs DT173G, gjort av Cecilia Edvardsson */
+
+/* De olika undersidorna */
+
+/* Gemensamt för flera undersidor */
+
+.section-about,
+.section-contact,
+.section-menu,
+.section-booking {
+    width: 70%;
+    max-width: 1100px;
+    margin: 5% auto;
+}
+
+.section-about h2,
+.section-contact h2,
+.section-booking h2,
+.section-menu h2 {
+    padding-top: 3%;
+    font-size: 25px;
+    font-weight: 500;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        padding: 20px 0 0 0;
+        text-align: left;
+    }
+}
+
+
+/* Index */
+
+.index-opening {
+    padding-top: 40px;
+    padding-left: 20px;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+        margin: auto;
+    }
+}
+
+.index-opening {
+    h2 {
+        font-size: 23px;
+        font-weight: 700;
+
+        @media screen and (min-width: $breakpoint-tablet) {
+            font-size: 25px;
+            text-align: right;
+            padding-right: 60px;
+        }
+
+        @media screen and (min-width: $breakpoint-desktop) {
+            padding-right: 90px;
+        }
+
+        @media screen and (max-width: $breakpoint-mini) {
+            font-size: 21px;
+        }
+    }
+
+    p a {
+        font-family: $fancy-font;
+        font-size: 30px;
+        color: $salmon-orange;
+        text-decoration: none;
+    }
+
+    p {
+        font-size: 16px;
+        width: 80%;
+        max-width: 600px;
+
+        @media screen and (min-width: $breakpoint-tablet) {
+            width: 40%;
+            max-width: 450px;
+            margin-left: auto;
+            text-align: left;
+            padding-right: 20px;
+        }
+    }
+}
+
+.section-index picture img {
+    width: 100%;
+    margin-top: 20px;
+
+    @media screen and (min-width: $breakpoint-desktop) {
+        margin: auto;
+        display: block;
+        max-width: 1500px;
+        text-align: center;
+    }
+}
+
+/* Menu */
+
+.section-menu {
+
+    h3 {
+        padding-top: 30px;
+        padding-bottom: 10px;
+        font-size: 20px;
+    }
+
+    p {
+        max-width: 600px;
+    }
+
+    img {
+        width: 100%;
+        max-width: 400px;
+        margin: 30px auto 30px auto;
+        display: block;
+        border-radius: 20px;
+
+        @media screen and (min-width: $breakpoint-tablet) {
+            max-width: 1000px;
+        }
+    }
+
+    .menu-lists {
+        @media screen and (min-width: $breakpoint-tablet) {
+            width: 80%;
+            margin: auto;
+        }
+    }
+}
+
+.menu-part {
+    li {
+        padding-bottom: 20px;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    ul li span {
+        padding-left: 20px;
+        color: $text-color-general;
+    }
+
+    .menu-name {
+        color: $salmon-orange;
+    }
+
+}
+
+.section-menu {
+
+    .menu-part {
+        @media screen and (min-width: $breakpoint-tablet) {
+            padding-top: 20px;
+            width: 80%;
+            margin: auto;
+            text-align: center;
+        }
+    }
+
+    .menu-part h3 {
+        @media screen and (min-width: $breakpoint-tablet) {
+            text-align: center;
+        }
+    }
+}
+
+/* About & contact */
+
+.section-about,
+.section-contact {
+
+    img {
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        @media screen and (min-width: $breakpoint-tablet) {
+            width: 75%;
+            max-width: 680px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+/* Booking */
+
+.section-booking {
+    div p {
+        @media screen and (min-width: $breakpoint-tablet) {
+            width: 75%;
+            max-width: 700px;
+            margin-bottom: 20px;
+        }
+    }
+
+    img {
+        display: none;
+
+        @media screen and (min-width: $breakpoint-tablet) {
+            width: 400px;
+            padding-top: 40px;
+            padding-right: 55px;
+            display: block;
+        }
+    }
+
+    textarea {
+        height: 120px;
+    }
+
+    .formparagraphs {
+        width: 240px;
+        margin: 10px 10px 10px 20px;
+    }
+
+    .flexbox-booking {
+        @media screen and (min-width: $breakpoint-tablet) {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+    form {
+        padding-top: 20px;
+        width: 60%;
+    }
+
+    fieldset {
+        padding: 30px 0px 20px 0px;
+        width: 100%;
+        max-width: 330px;
+
+        @media screen and (min-width: $breakpoint-tablet) {
+            max-width: 350px;
+            margin-left: 20px;
+        }
+
+        @media screen and (min-width: $breakpoint-desktop) {
+            margin-left: 120px;
+            max-width: 500px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+
+    label {
+        margin: 10px 30px 10px 20px;
+
+        @media screen and (max-width: $breakpoint-mini) {
+            margin: 10px 0px 10px 20px;
+        }
+    }
+
+    input,
+    textarea {
+        background-color: lighten($salmon-orange, 30%);
+        padding: 6px 10px;
+        margin: 10px 30px 10px 20px;
+        width: 250px;
+        border: none;
+        font-family: $simple-font;
+        font-size: 17px;
+
+        @media screen and (max-width: $breakpoint-mini) {
+            width: 200px;
+            margin: 10px 20px 10px 20px;
+            padding: 6px 0px 6px 10px;
+        }
+    }
+
+    textarea {
+        height: 120px;
+    }
+
+    #submitBookingBtn {
+        background-color: #FFFFFF;
+        width: 150px;
+    }
+
+    .formparagraphs {
+        width: 240px;
+        margin: 10px 10px 10px 20px;
+    }
+
+    .flexbox-booking {
+        @media screen and (min-width: $breakpoint-tablet) {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+    #successful-bookingDiv,
+    #unsuccessful-bookingDiv {
+        margin: 20px 10px 0 20px;
+        width: 100%;
+        max-width: 400px;
+
+        @media screen and (max-width: $breakpoint-mini) {
+            width: 100%;
+        }
+    }
+
+    #successful-bookingText,
+    #unsuccessful-bookingText {
+        font-size: 19px;
+        width: 100%;
+        max-width: 300px;
+
+        @media screen and (max-width: $breakpoint-mini) {
+            width: 90%;
+            font-size: 18px;
+        }
+    }
+
+    #unsuccessful-bookingText {
+        color: red;
+    }
+
+    #successful-bookingText {
+        color: green;
+    }
+
+
+}

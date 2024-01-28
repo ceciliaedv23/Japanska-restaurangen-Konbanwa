@@ -1,0 +1,122 @@
+<!-- HTML-kod för lösning till projektuppgiften i kurs DT173G, gjort av Cecilia Edvardsson -->
+
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bokning | Konbanwa Restaurang</title>
+    <!-- CSS, Fonts, Icons, Favicons-->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=B612&family=Damion&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/favicons/faviconico.ico">
+    <link rel="icon" type="image/x-icon" href="images/favicons/faviconpng.png">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <a href="index.html"><img class="img" src="images/logo/logo.svg" alt="Konbanwa Restaurang">
+            <h1>Konbanwa</h1>
+        </a>
+        <!-- Menyknapp för öppning -->
+        <button class="menuBtn open" id="openMenubtn">
+            <span class="menuIcon">
+                <span class="bars"></span>
+                <span class="bars"></span>
+                <span class="bars"></span>
+            </span>
+        </button>
+        <nav id="navigationMenu">
+            <!-- Menyknapp för stängning -->
+            <button class="menuBtn close" id="closeMenubtn">
+                <span class="menuIcon">
+                    <span class="bars line1"></span>
+                    <span class="bars line2"></span>
+                </span>
+            </button>
+            <ul>
+                <li><a href="index.html">Hem</a></li>
+                <li><a href="menu.html">Meny</a></li>
+                <li><a href="about.html">Om oss</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+                <li class="nav-link-bokning"><a class="nav-link-bokning" href="booking.html">Boka bord</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Huvudinnehåll -->
+    <main>
+        <section class="section-booking">
+            <h2>Boka bord</h2>
+            <div>
+                <p class="">Här kan du boka bord för ett sällskap på upp till 9 personer. Vi har öppet 17:00 till 23:00
+                    och bordsbokning är möjlig för varje halvtimme med start 17:30 och senast 22:00. Efter inskickande
+                    av formuläret återkommer vi till dig via e-post för att bekräfta att
+                    ett bord finns bokat.<br><br>Gäller bokningen dagens datum så rekommenderar vi att du i stället
+                    ringer oss på <strong>08-123 45 67</strong> för att hinna bekräfta din bokning innan
+                    önskad tid har passerat. Kontakta även oss per telefon om bokningen gäller minst 10 personer.
+                    <br><br> Vi sparar dina uppgifter endast för att hantera våra aktuella bordsbokningar.</p>
+                <div class="flexbox-booking">
+                    <div>
+                        <picture>
+                            <source type="image/webp" srcset="images/booking/bookingwebp.webp">
+                            <img src="images/booking/bookingjpg.jpg" alt="">
+                        </picture>
+                    </div>
+                    <div>
+                        <!-- Kontaktformulär -->
+                        <form method="post" action="booking.html">
+                            <fieldset>
+                                <legend>Bokningsformulär</legend>
+                                <label for="guests">Antal personer *</label><br>
+                                <input type="number" id="guests" name="guests" value="2" min="1" max="9" required><br>
+                                <label for="date">Datum *</label><br>
+                                <input type="date" id="date" name="date" required><br>
+                                <label for="time">Tid *</label><br>
+                                <input type="time" id="time" name="time" min="17:00" max="22:00" step="1800" required><br>
+                                <label for="name">Namn * (max 50 tecken)</label><br>
+                                <input type="text" id="name" name="name" maxlength="50" required><br>
+                                <label for="email">E-postadress * (max 45 tecken)</label><br>
+                                <input type="email" id="email" name="email" maxlength="45" required><br>
+                                <label for="phone">Telefonnr * (max 20 tecken)</label><br>
+                                <input type="text" id="phone" name="phone" maxlength="20" required ><br>
+                                <label for="comment">Kommentar (max 70 tecken)</label><br>
+                                <textarea id="comment" name="comment" maxlength="70"></textarea><br><br>
+                                <div class="contact-form-btn">
+                                    <input type="submit" id="submitBookingBtn" value="Skicka">
+                                </div>
+                                <p class="formparagraphs">* = Obligatoriskt fält.</p>
+
+                                <!-- Meddelanden vid försök till formulärinskick -->
+                                <div id="successful-bookingDiv">
+                                    <p id="successful-bookingText">
+                                    </p>
+                                </div>
+                                <div id="unsuccessful-bookingDiv">
+                                    <p id="unsuccessful-bookingText">
+                                    </p>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <h3>Kontakt</h3>
+        <p>Nybrogatan 17</p>
+        <p>Tel: 08-123 45 67</p>
+        <p>Mail:<a href=" mailto:ceed2200@student.miun.se"> kontakt@konbanwa.se</a></p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

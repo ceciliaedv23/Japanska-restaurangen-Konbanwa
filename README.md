@@ -1,4 +1,7 @@
-# Japanska restaurangen "Konbanwa"
-En webbapplikation som presenterar en fiktiv japansk restaurang med bokningsfunktion via webbtjänst och admin-gränssnitt (vid förfrågan ges inblick i de senare). Gulp användes som automatiserad arbetsprocessmetod.  Fokus låg på följande språk/format/tekniker: Gulp, SASS/SCSS, konsumtion av webbtjänst med PHP.
+# Innehåll i detta repository
 
-Applikationen kan ses på adressen http://studenter.miun.se/~ceed2200/writeable/konbanwa-site/
+Detta repository innehåller filerna som löser en del av projektuppgiften i kursen Webbutveckling III, DT173G. Här skapas en webbplats som presenterar en restaurang och med hjälp av en kopplad webbtjänst dynamiskt skriver ut en meny, samt gör det möjligt att göra bordsbokningar. Menyn och bokningarna lagras i en databas, till och varifrån informationen överförs. Webbplatsen kan ses på adressen:
+
+https://studenter.miun.se/~ceed2200/writeable/wplats/
+
+Skapare av webbplatsen/dess filer är Cecilia Edvardsson.
